@@ -44,7 +44,7 @@ public class Driver {
 		try {
 			varP.join();
 			t.cancel();
-			if(varP.failed == false){
+			if(varP.success){
 				System.out.println("Primary is successful!");
 				return;
 			}
@@ -61,7 +61,7 @@ public class Driver {
 		try {
 			varS.join();
 			t.cancel();
-			if(varS.failed == false){
+			if(varS.success){
 				System.out.println("Secondary is successful!");
 				return;
 			}
